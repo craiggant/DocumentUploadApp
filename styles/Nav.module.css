@@ -7,16 +7,16 @@
 	padding: 1.5rem;
 	background: var(--secondary);
 	z-index: 10;
+	display: grid;
+	justify-content: center;
 }
 
 .navWrapper a {
 	display: block;
-	text-align: left;
+	/* text-align: center; */
 	font-size: 1.5rem;
 	color: var(--inverse);
 	text-decoration: none;
-	transition: 0.3s ease border;
-
 	white-space: nowrap;
 }
 
@@ -24,8 +24,8 @@
 	background: var(--primary);
 	opacity: 0.9;
 	color: var(--secondary);
-	transition: 0.4s ease padding;
 	padding-left: 0.5rem;
+	transition: 0.4s ease padding;
 }
 
 .navWrapper span {
@@ -33,8 +33,6 @@
 }
 
 .title {
-	display: grid;
-	grid-template-columns: 2.2rem 1fr;
 	min-height: 3.125rem;
 	font-size: 1.8rem;
 	color: var(--primary);
@@ -46,4 +44,13 @@
 	margin: 0 0 0.625rem;
 	padding: 0;
 	border-radius: 0.3rem;
+}
+
+.icon {
+	margin-right: 0.625rem;
+}
+
+.closedNav {
+	display: grid;
+	justify-content: center;
 }

@@ -47,19 +47,24 @@ const Nav = ({ navLinks = [], title = '' }) => {
 		>
 			<nav>
 				<div className={style.title}>
-					<FontAwesomeIcon icon={faChevronCircleUp} />
+					<FontAwesomeIcon
+						className={isOpen ? style.icon : ''}
+						icon={faChevronCircleUp}
+					/>
 					<animated.h3 style={textAnimation}>{title}</animated.h3>
 				</div>
 				<hr className={style.separator} />
 				{navLinks.map((link, index) => (
-					<Link href={link.link} key={index}>
-						<a onClick={() => handleClick(link.text)}>
-							<FontAwesomeIcon size="sm" icon={link.icon} />
-							<animated.span style={textAnimation}>
-								{link.text}
-							</animated.span>
-						</a>
-					</Link>
+					<div className={!isOpen && style.closedNav}>
+						<Link href={link.link} key={index}>
+							<a onClick={() => handleClick(link.text)}>
+								<FontAwesomeIcon size="sm" icon={link.icon} />
+								<animated.span style={textAnimation}>
+									{link.text}
+								</animated.span>
+							</a>
+						</Link>
+					</div>
 				))}
 			</nav>
 		</animated.div>

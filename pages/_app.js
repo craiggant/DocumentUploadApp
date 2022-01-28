@@ -1,7 +1,5 @@
 import '../styles/globals.css';
 import 'bootswatch/dist/flatly/bootstrap.min.css';
-// import 'bootswatch/dist/cosmo/bootstrap.min.css';
-// import 'bootswatch/dist/materia/bootstrap.min.css';
 import { Provider } from 'react-redux';
 import Layout from '../components/Layout';
 import { store } from '../app/store';

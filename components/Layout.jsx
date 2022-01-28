@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { useSelector } from 'react-redux';
+import { selectLinks } from '../store/userSlice';
+import useCheckWindowSize from '../hooks/CheckWindowSize';
+import MobileNav from './MobileNav';
 import Head from 'next/head';
+import Nav from './Nav';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 config.autoAddCss = false;
-import { useSelector, useDispatch } from 'react-redux';
-import { selectLinks, selectUser, setUser } from '../store/userSlice';
-import useCheckWindowSize from '../hooks/CheckWindowSize';
-import MobileNav from './MobileNav';
-import Nav from './Nav';
 
 const Layout = ({ children, title }) => {
 	const { isMobile } = useCheckWindowSize();

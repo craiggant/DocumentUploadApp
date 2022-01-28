@@ -1,13 +1,18 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { useDispatch } from 'react-redux';
+import { useRouter } from 'next/router';
 import { useSpring, animated } from 'react-spring';
+import { Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEllipsisH } from '@fortawesome/free-solid-svg-icons';
+import { resetUser } from '../store/userSlice';
 import style from '../styles/MobileNav.module.css';
-import { Button } from 'react-bootstrap';
 
 const MobileNav = ({ navLinks = [] }) => {
 	const [isOpen, setIsOpen] = useState(false);
+	const dispatch = useDispatch();
+	const router = useRouter();
 
 	const navAnimation = useSpring({
 		// width: isOpen ? `100vw` : `5rem`,
