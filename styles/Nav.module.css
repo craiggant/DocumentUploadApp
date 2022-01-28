@@ -21,9 +21,9 @@
 }
 
 .navWrapper a:hover {
-	background: var(--primary);
-	opacity: 0.9;
-	color: var(--secondary);
+	/* background: var(--primary); */
+	/* opacity: 0.9; */
+	color: var(--primary);
 	padding-left: 0.5rem;
 	transition: 0.4s ease padding;
 }

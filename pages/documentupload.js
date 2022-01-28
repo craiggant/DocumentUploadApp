@@ -33,6 +33,8 @@ const documentUpload = () => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
+		// set error to false, so any new error will
+		setShowErrorToast(false);
 		// more form validation here in a production setting
 		// ajax call to wherever you're submitting these files would go here
 		// show user feedback if something goes wrong
@@ -50,6 +52,7 @@ const documentUpload = () => {
 	const handleFileAddition = (e) => {
 		e.preventDefault();
 		setIsDragOver(false);
+		setShowErrorToast(false);
 		// dataTransfer exists on the drop even, while target is for a click event
 		const selected = e?.dataTransfer?.files || e?.target?.files;
 		const { validFiles, invalidFiles, errorMessages } = handleFileList(

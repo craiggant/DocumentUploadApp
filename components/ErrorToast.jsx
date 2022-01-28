@@ -8,7 +8,11 @@ const ErrorToast = ({ items, errorMessages, show, setShowErrorToast }) => {
 	};
 	return (
 		<ToastContainer position="top-end" className="p-3">
-			<Toast onClose={handleClose} show={show}>
+			<Toast
+				onClose={handleClose}
+				show={show}
+				style={{ backgroundColor: '#fff' }}
+			>
 				<Toast.Header style={{ background: '#fc0' }}>
 					<strong className="me-auto" style={{ color: 'black' }}>
 						Alert
