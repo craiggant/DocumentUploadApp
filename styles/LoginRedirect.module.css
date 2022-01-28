@@ -1,0 +1,31 @@
+.container {
+	display: grid;
+	justify-content: center;
+	align-items: center;
+}
+
+.text {
+	margin-top: 2rem;
+}
+
+.link {
+	width: 100%;
+	display: grid;
+	justify-content: center;
+	align-items: center;
+}
+
+.submitBtn {
+	background-color: var(--primary);
+	color: var(--secondary);
+	margin: 0.5rem;
+	border: transparent;
+	max-width: 15rem;
+}
+
+.submitBtn:hover {
+	background-color: var(--success);
+	color: var(--inverse);
+	margin: 0.5rem;
+	border: transparent;
+}

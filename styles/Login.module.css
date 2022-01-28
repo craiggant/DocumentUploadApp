@@ -1,0 +1,40 @@
+.container {
+	height: 100vh;
+	min-width: 20rem;
+	max-width: 30vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.buttonGroup {
+	float: right;
+}
+
+.submitBtn {
+	background-color: var(--primary);
+	color: var(--secondary);
+	margin: 0.5rem;
+	border: transparent;
+}
+
+.submitBtn:hover {
+	background-color: var(--success);
+	color: var(--inverse);
+	margin: 0.5rem;
+	border: transparent;
+}
+
+.resetBtn {
+	background-color: var(--muted);
+	color: var(--inverse);
+	margin: 0.5rem;
+	border: transparent;
+}
+
+.resetBtn:hover {
+	background-color: var(--secondary);
+	/* color: var(--secondary); */
+	margin: 0.5rem;
+	border: transparent;
+}

@@ -1,0 +1,49 @@
+.navWrapper {
+	position: fixed;
+	left: 0;
+	top: 0;
+	height: 100vh;
+	min-width: 5rem;
+	padding: 1.5rem;
+	background: var(--secondary);
+	z-index: 10;
+}
+
+.navWrapper a {
+	display: block;
+	text-align: left;
+	font-size: 1.5rem;
+	color: var(--inverse);
+	text-decoration: none;
+	transition: 0.3s ease border;
+
+	white-space: nowrap;
+}
+
+.navWrapper a:hover {
+	background: var(--primary);
+	opacity: 0.9;
+	color: var(--secondary);
+	transition: 0.4s ease padding;
+	padding-left: 0.5rem;
+}
+
+.navWrapper span {
+	margin-left: 0.625rem;
+}
+
+.title {
+	display: grid;
+	grid-template-columns: 2.2rem 1fr;
+	min-height: 3.125rem;
+	font-size: 1.8rem;
+	color: var(--primary);
+	white-space: nowrap;
+}
+
+.separator {
+	color: var(--primary);
+	margin: 0 0 0.625rem;
+	padding: 0;
+	border-radius: 0.3rem;
+}

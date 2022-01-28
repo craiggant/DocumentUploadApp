@@ -1,0 +1,56 @@
+.navWrapper {
+	position: fixed;
+	bottom: 0;
+	width: 100vw;
+	min-height: 5rem;
+	padding: 1.75rem;
+	background: var(--secondary);
+	z-index: 10;
+	border-radius: 1.25rem 1.25rem 0 0;
+	overflow: auto;
+}
+
+.navWrapper a {
+	display: grid;
+	text-align: center;
+	font-size: 2rem;
+	color: var(--inverse);
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+.navWrapper span {
+	margin-right: 0.75rem;
+}
+
+.mobileBtn {
+	margin: 0.3rem;
+	border-radius: 0.5rem;
+	background-color: var(--primary);
+	color: var(--secondary);
+}
+
+.title {
+	display: grid;
+	grid-template-columns: 1fr 3rem 1fr;
+	grid-template-rows: 1fr;
+	justify-content: center;
+	min-height: 3.125rem;
+	font-size: 2rem;
+	color: var(--primary);
+	white-space: nowrap;
+}
+
+.separator {
+	color: var(--primary);
+	margin: 0 0 0.625rem;
+	padding: 0;
+	border-radius: 0.3rem;
+}
+
+.fontAwes {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 1rem;
+}

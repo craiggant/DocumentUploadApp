@@ -1,0 +1,46 @@
+.container {
+	height: 100vh;
+	min-width: 6.75rem;
+	max-width: 55vw;
+	display: grid;
+	justify-content: center;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(4, 1fr);
+}
+
+.container h1 {
+	margin-top: 6.25rem;
+}
+
+.buttonContainer {
+	float: right;
+	margin-top: 1.5rem;
+}
+
+.submitBtn {
+	background-color: var(--primary);
+	color: var(--secondary);
+	margin: 0.5rem;
+	border: transparent;
+}
+
+.submitBtn:hover {
+	background-color: var(--success);
+	color: var(--inverse);
+	margin: 0.5rem;
+	border: transparent;
+}
+
+.resetBtn {
+	background-color: var(--muted);
+	color: var(--inverse);
+	margin: 0.5rem;
+	border: transparent;
+}
+
+.resetBtn:hover {
+	background-color: var(--secondary);
+	/* color: var(--secondary); */
+	margin: 0.5rem;
+	border: transparent;
+}

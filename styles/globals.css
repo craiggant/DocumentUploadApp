@@ -1,0 +1,29 @@
+:root {
+	--default: #767676;
+	--primary: #fc0;
+	--secondary: #000;
+	--complementary: #0275d8;
+	--success: #3ecc71;
+	--info: #81cfe0;
+	--warning: #f4b350;
+	--danger: #ff6445;
+	--inverse: #fff;
+	--muted: #636c72;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+* {
+	box-sizing: border-box;
+}

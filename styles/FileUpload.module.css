@@ -1,0 +1,23 @@
+.container {
+	margin: 2rem 3rem 0 3rem;
+	border-radius: 0.75rem;
+	background: var(--inverse);
+	box-shadow: 1rem 1rem 2rem #bebebe, -1rem -1rem 2rem var(--inverse);
+	min-width: 18.75rem;
+	min-height: 6.25rem;
+}
+
+.label {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr;
+	justify-items: center;
+	align-items: center;
+	min-width: 18.75rem;
+	min-height: 6.25rem;
+	cursor: pointer;
+}
+
+.hidden {
+	display: none;
+}
