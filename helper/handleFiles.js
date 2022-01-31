@@ -4,11 +4,19 @@ const sortFile = (acceptableFileTypes, maxFileSize, file, objectToReturn) => {
 	const fType = file.type.split('/')[1];
 
 	// check to see if file already exists in upload queue
-	const fileAlreadyExists = validFiles.find(
+	const fileAlreadyExists = validFiles.map(
 		(existingFile) => existingFile.name === file.name
 	);
 
-	if (!fileAlreadyExists) {
+	if (fileAlreadyExists[0]) {
+		console.log('hi');
+		invalidFiles.push(file);
+		errorMessages.add(
+			`The filename must be unique. A file with the name ${file.name} is already staged to be uploaded.`
+		);
+	}
+
+	if (!fileAlreadyExists[0]) {
 		if (acceptableFileTypes.includes(fType) && file.size <= maxFileSize) {
 			validFiles.push(file);
 		} else {

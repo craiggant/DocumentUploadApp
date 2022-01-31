@@ -7,7 +7,7 @@ import styles from '../styles/Login.module.css';
 
 const defaultCredentials = {
 	username: 'testuser',
-	password: 'testpassword',
+	password: '1234123',
 };
 
 export const login = () => {
@@ -42,7 +42,7 @@ export const login = () => {
 					<h1>Login</h1>
 					<p>
 						To log in to this sample application, you must use the
-						username "testuser" and the password "testpassword".
+						username "testuser" and the password "1234123".
 					</p>
 					<Form.Group className="mb-3" controlId="formBasicEmail">
 						<Form.Label>Username</Form.Label>

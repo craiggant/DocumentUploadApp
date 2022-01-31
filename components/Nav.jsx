@@ -55,8 +55,11 @@ const Nav = ({ navLinks = [], title = '' }) => {
 				</div>
 				<hr className={style.separator} />
 				{navLinks.map((link, index) => (
-					<div className={!isOpen && style.closedNav}>
-						<Link href={link.link} key={index}>
+					<div
+						className={!isOpen ? style.closedNav : undefined}
+						key={index}
+					>
+						<Link href={link.link}>
 							<a onClick={() => handleClick(link.text)}>
 								<FontAwesomeIcon size="sm" icon={link.icon} />
 								<animated.span style={textAnimation}>

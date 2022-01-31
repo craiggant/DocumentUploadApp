@@ -3,7 +3,7 @@
 export default function handler(req, res) {
 	try {
 		const { username, password } = req.body;
-		if (username === 'testuser' && password === 'testpassword') {
+		if (username === 'testuser' && password === '1234123') {
 			res.status(200).json({
 				userId: '0000001',
 				fName: 'Test',
