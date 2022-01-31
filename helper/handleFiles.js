@@ -1,22 +1,34 @@
+import { fileCompare } from './fileCompare';
+
+/**
+ *
+ * @param {Array} acceptableFileTypes
+ * @param {Number} maxFileSize
+ * @param {File} file
+ * @param {fileInterface} objectToReturn
+ * @returns
+ */
+
 const sortFile = (acceptableFileTypes, maxFileSize, file, objectToReturn) => {
 	const { validFiles, invalidFiles, errorMessages } = objectToReturn;
 	// isolates file type (ex: 'pdf') from longer string (ex: 'application/pdf')
 	const fType = file.type.split('/')[1];
 
 	// check to see if file already exists in upload queue
-	const fileAlreadyExists = validFiles.map(
+	const fileAlreadyExists = validFiles.find(
 		(existingFile) => existingFile.name === file.name
 	);
 
-	if (fileAlreadyExists[0]) {
-		console.log('hi');
-		invalidFiles.push(file);
-		errorMessages.add(
-			`The filename must be unique. A file with the name ${file.name} is already staged to be uploaded.`
-		);
+	if (fileAlreadyExists) {
+		const isNewFileIdenticalToOld = fileCompare(file, fileAlreadyExists);
+		console.log(isNewFileIdenticalToOld);
+		// invalidFiles.push(file);
+		// errorMessages.add(
+		// 	`The filename must be unique. A file with the name ${file.name} is already staged to be uploaded.`
+		// );
 	}
 
-	if (!fileAlreadyExists[0]) {
+	if (!fileAlreadyExists) {
 		if (acceptableFileTypes.includes(fType) && file.size <= maxFileSize) {
 			validFiles.push(file);
 		} else {
